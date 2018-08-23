@@ -24,13 +24,13 @@ for k = 1:d
     beta{k} = rand(dim(k),1);
 end
 
-alpha = 5;
-a0 = 0.5;
+alpha = 0.3;
+a0 = 0.3;
 b0 = 1;
 
 % figure;
 rmse = zeros(maxiter,1);
-fprintf('\n------Bayesian Poisson Tensor Factorization------\n');
+fprintf('\n------Bayesian Hierarchical Poisson Factorization------\n');
 for iter = 1:maxiter
     % Generate X_ijkr
     mat = kr(kr(U{3},U{2}),U{1});
@@ -86,7 +86,7 @@ for iter = 1:maxiter
         subplot(1,d+3,k);imagesc(U{k});
     end
     subplot(1,d+3,d+1:d+3);plot(rmse(1:iter));
-    ylim([3.6,6.5]);xlabel('iteration');ylabel('RMSE (km/h)');
+    ylim([4,10]);xlabel('iteration');ylabel('RMSE (km/h)');
     drawnow;
 end
 FactorMat = U;

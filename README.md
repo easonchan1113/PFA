@@ -1,8 +1,8 @@
 # Poisson Factor Analysis
 Implementations of various Poisson Factor Analysis (PFA) models. 
 
-## File Descriptions
-### Models
+## File Description
+### Model
 * `BHPF.m` : Implements Gibbs sampling for [Bayesian Hierarchical Poisson Factorization (BHPF)](http://www.cs.columbia.edu/~blei/papers/GopalanHofmanBlei2015.pdf).
 * `BPTF.m` : Implements Gibbs sampling for [Bayesian Poisson Tensor Factorization (BPTF)](https://people.cs.umass.edu/~aschein/ScheinPaisleyBleiWallach2015_paper.pdf).
 * `BGGP.m` : 
@@ -11,7 +11,7 @@ Implementations of various Poisson Factor Analysis (PFA) models.
 * `GaP_v3.m` :
 * `HaLRTC.m` : A baseline model using low rank tensor completion ([HaLRTC](http://peterwonka.net/Publications/pdfs/2012.PAMI.JiLiu.Tensor%20Completion.pdf)).
 
-### Tools
+### Tool
 * `kr.m` : 
 * `mat2ten.m` :
 * `ten2mat.m` :
