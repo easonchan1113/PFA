@@ -1,4 +1,4 @@
-function [tensor_hat,FactorMat,rmse] = BGGP_CP(original_tensor,sparse_tensor,varargin)
+function [tensor_hat,FactorMat,rmse] = BGGP(original_tensor,sparse_tensor,varargin)
 % Bayesian CP Factorization for Count Data with BGGP assumption
 
 dim = size(sparse_tensor);

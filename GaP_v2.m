@@ -1,4 +1,4 @@
-function [tensor_hat,FactorMat,rmse] = GaP_CP_v2(original_tensor,sparse_tensor,varargin)
+function [tensor_hat,FactorMat,rmse] = GaP_v2(original_tensor,sparse_tensor,varargin)
 % Bayesian CP Factorization for Count Data with GaP assumption
 
 dim = size(sparse_tensor);
