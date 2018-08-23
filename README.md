@@ -2,4 +2,4 @@
 Implementations of various Poisson Factor Analysis (PFA) models. 
 
 ## File Descriptions
-* `[BHPF.m](https://github.com/easonchan1113/PFA/blob/master/BHPF.m)` : 
+* `BHPF.m` : Implements Gibbs sampling for [Bayesian Hierarchical Poisson Factorization (BHPF)](http://www.cs.columbia.edu/~blei/papers/GopalanHofmanBlei2015.pdf).
