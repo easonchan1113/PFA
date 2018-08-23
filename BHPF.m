@@ -86,7 +86,7 @@ for iter = 1:maxiter
         subplot(1,d+3,k);imagesc(U{k});
     end
     subplot(1,d+3,d+1:d+3);plot(rmse(1:iter));
-    ylim([6,10.5]);xlabel('iteration');ylabel('RMSE (km/h)');
+    ylim([3.6,6.5]);xlabel('iteration');ylabel('RMSE (km/h)');
     drawnow;
 end
 FactorMat = U;

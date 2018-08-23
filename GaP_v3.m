@@ -26,10 +26,10 @@ for k = 1:d
     p{k} = 0.5*ones(dim(k),1);
 end
 
-a0 = 1e-2;
-b0 = 1e-2;
-c0 = 1e-2;
-d0 = 1e-2;
+a0 = 1e-4;
+b0 = 1e-4;
+c0 = 1e-4;
+d0 = 1e-4;
 
 % figure;
 rmse = zeros(maxiter,1);

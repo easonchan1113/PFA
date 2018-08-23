@@ -25,10 +25,10 @@ for k = 1:d
     p{k} = 0.5*ones(r_CP,1);
 end
 
-a0 = 1e-2;
-b0 = 1e-2;
-c0 = 1e-2;
-d0 = 1e-2;
+a0 = 1e-6;
+b0 = 1e-6;
+c0 = 1e-6;
+d0 = 1e-6;
 
 % figure;
 rmse = zeros(maxiter,1);
@@ -131,16 +131,14 @@ for iter = 1:maxiter
         r{3}(l,1) = gamrnd(a0+L, 1./(b0-sum_log_pk));
     end
     
-	
-	
 	% Print the results
-    fprintf('#iteration = %g, #RMSE = %g km/h \n',iter,rmse(iter));
+    fprintf('#iteration = %g, #RMSE = %g \n',iter,rmse(iter));
     set(gcf, 'Units', 'Normalized', 'OuterPosition', [0 0 1 1]);
     for k = 1:d
         subplot(1,d+3,k);imagesc(U{k});
     end
     subplot(1,d+3,d+1:d+3);plot(rmse(1:iter));
-    ylim([5,7.5]);xlabel('iteration');ylabel('RMSE (km/h)');
+    ylim([3.5,6.5]);xlabel('iteration');ylabel('RMSE');
     drawnow;
 end
 FactorMat = U;
