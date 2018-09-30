@@ -3,15 +3,15 @@ function [tensor_hat,FactorMat,rmse] = BHPF(original_tensor,sparse_tensor,vararg
 
 dim = size(sparse_tensor);
 d = length(dim);
-position = find(sparse_tensor~=0);
+position = sparse_tensor~=0;
 pos = find(original_tensor>0 & sparse_tensor==0); 
 % pos = find(sparse_tensor==0 );
 binary_tensor = zeros(dim);
 binary_tensor(position) = 1;
 
 ip = inputParser;
-ip.addParamValue('CP_rank',20,@isscalar);
-ip.addParamValue('maxiter',200,@isscalar);
+ip.addParameter('CP_rank',20,@isscalar);
+ip.addParameter('maxiter',200,@isscalar);
 ip.parse(varargin{:});
 
 r_CP = ip.Results.CP_rank;

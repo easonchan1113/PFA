@@ -10,8 +10,8 @@ pos = find(original_mat>0 & sparse_mat==0);
 % binary_tensor(position) = 1;
 
 ip = inputParser;
-ip.addParamValue('CP_rank',20,@isscalar);
-ip.addParamValue('maxiter',200,@isscalar);
+ip.addParameter('CP_rank',20,@isscalar);
+ip.addParameter('maxiter',200,@isscalar);
 ip.parse(varargin{:});
 
 r_CP = ip.Results.CP_rank;
